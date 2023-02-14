@@ -4,7 +4,7 @@
 all: srccomplexity srcMLXPathCount_t
 
 srccomplexity : srcComplexity.o srcMLXPathCount.o
-	g++ --std=c++17 srcComplexity.o srcMLXPathCount.o -lxml2 -o srccomplexity
+	g++ --std=c++17 srcComplexity.o srcMLXPathCount.o -lxml2 -o $@
 
 srcComplexity.o : srcComplexity.cpp srcMLXPathCount.hpp
 	g++ --std=c++17 -c srcComplexity.cpp
@@ -13,7 +13,7 @@ srcMLXPathCount.o : srcMLXPathCount.cpp srcMLXPathCount.hpp
 	g++ --std=c++17 -I/usr/include/libxml2 -c srcMLXPathCount.cpp
 
 srcMLXPathCount_t : srcMLXPathCount_t.o srcMLXPathCount.o srcMLXPathCount.hpp
-	g++ --std=c++17 srcMLXPathCount_t.o srcMLXPathCount.o -lxml2 -o srcMLXPathCount_t
+	g++ --std=c++17 srcMLXPathCount_t.o srcMLXPathCount.o -lxml2 -o $@
 
 srcMLXPathCount_t.o : srcMLXPathCount_t.cpp srcMLXPathCount.hpp
 	g++ --std=c++17 -c srcMLXPathCount_t.cpp
