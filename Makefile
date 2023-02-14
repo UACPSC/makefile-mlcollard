@@ -22,6 +22,10 @@ srcMLXPathCount_t.o : srcMLXPathCount_t.cpp srcMLXPathCount.hpp
 run: srccomplexity
 	./srccomplexity srcMLXPathCount.cpp.xml
 
+.PHONY: test
+test: srcMLXPathCount_t
+	./srcMLXPathCount_t
+
 .PHONY: clean
 clean:
 	rm -f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCount_t srcMLXPathCount_t.o
