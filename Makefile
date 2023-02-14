@@ -24,4 +24,4 @@ run: srccomplexity
 
 .PHONY: clean
 clean:
-	rm -f srccomplexity srcComplexity.o srcMLXPathCount.o
+	rm -f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCount_t srcMLXPathCount_t.o
