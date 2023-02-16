@@ -10,3 +10,11 @@ add_executable(srccomplexity srcComplexity.cpp srcMLXPathCount.cpp)
 
 find_package(LibXml2 REQUIRED)
 target_link_libraries(srccomplexity LibXml2::LibXml2)
+
+add_custom_target(run
+    COMMENT "Run demo"
+    COMMAND $<TARGET_FILE:srccomplexity> ${CMAKE_SOURCE_DIR}/srcMLXPathCount.cpp.xml
+    DEPENDS srccomplexity
+    USES_TERMINAL
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+)
