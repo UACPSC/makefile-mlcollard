@@ -6,6 +6,10 @@ project(srcComplexity)
 
 set(CMAKE_CXX_STANDARD 17)
 
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
 add_executable(srccomplexity srcComplexity.cpp srcMLXPathCount.cpp)
 
 find_package(LibXml2 REQUIRED)
