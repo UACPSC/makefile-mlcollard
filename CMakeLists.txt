@@ -7,3 +7,6 @@ project(srcComplexity)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(srccomplexity srcComplexity.cpp srcMLXPathCount.cpp)
+
+find_package(LibXml2 REQUIRED)
+target_link_libraries(srccomplexity LibXml2::LibXml2)
