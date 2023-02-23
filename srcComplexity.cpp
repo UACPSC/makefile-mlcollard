@@ -27,7 +27,7 @@ int main(int argc, const char* argv[]) {
     // e.g., f() has 2 conditions (and complexity 3), and g() has 3 conditions (and complexity 4).
     // For multiple functions/methods, count the conditions and the number of functions,
     // e.g., for f() and g() the count of conditions is 2 + 3 = 5 and the count of functions is 2.
-    int complexity = srcMLXPathCount(argv[1], "count(//src:condition | //src:function)");
+    int complexity = srcMLXPathCount(filename, "count(//src:condition | //src:function)");
     if (complexity < 0) {
         std::cerr << "Error in applying xpath\n";
         return 1;
