@@ -23,8 +23,8 @@ run: srccomplexity
 	./srccomplexity srcMLXPathCount.cpp.xml
 
 .PHONY: test
-test: srcMLXPathCount_t
-	./srcMLXPathCount_t
+test: srccomplexity
+	./srccomplexity srcMLXPathCount.cpp.xml
 
 .PHONY: clean
 clean:
