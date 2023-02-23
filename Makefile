@@ -4,7 +4,7 @@
 all: srccomplexity srcMLXPathCount_t
 
 srccomplexity : srcComplexity.o srcMLXPathCount.o
-	g++ --std=c++17 srcComplexity.o srcMLXPathCount.o -lxml2 -o $@
+	g++ --std=c++17 $^ -lxml2 -o $@
 
 srcComplexity.o : srcComplexity.cpp srcMLXPathCount.hpp
 	g++ --std=c++17 -c $^
